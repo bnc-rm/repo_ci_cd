@@ -1,0 +1,19 @@
+body {
+	   background-color: #ffcc66;
+	   font-family: Verdana, sans-serif;
+	   font-size: 16px;
+	 }
+	 
+table {
+	border-style:double; 
+	border-color:green;
+	background: #ffffcc
+	}
+	
+td {
+	border-style:double
+	}
+	
+tr:first-of-type {
+	background-color: yellow
+	}

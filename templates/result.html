@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Risultato </title>
+  </head>  
+  <body>   
+    <a href="/">Home</a>
+    <br>
+    {% if output == 'setosa' %}
+      <img src="{{ url_for('static', filename='setosa.png') }}"/>
+    {% endif %}	
+    {% if output == 'versicolor' %}
+      <img src="{{ url_for('static', filename='versicolor.png') }}"/>
+    {% endif %}	
+    {% if output == 'virginica' %}
+      <img src="{{ url_for('static', filename='virginica.png') }}"/>
+    {% endif %}		
+  </body>
+</html>

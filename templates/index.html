@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Classificazione </title>
+	<link rel="stylesheet" 
+	      href="{{ url_for('static', filename='index.css') }}">
+  </head>  
+  <body>   
+	<table>
+	 <tr>
+	   <th>Lunghezza petalo (cm)</th>
+	   <th>Larghezza petalo (cm)</th>
+	   <th>Num record</th>	   
+	   <th></th>
+	  </tr>
+	  {% for riga in output %}
+	    <tr>
+             <td>{{ riga['lunghezza'] }}</td>
+             <td>{{ riga['larghezza'] }}</td>
+             <td>{{ riga['risultato'] }}</td>	
+             <td><a 
+				  href="/results?record={{ riga['record'] }}">Classifica</a>
+			 </td> 			 
+	    </tr>
+      {% endfor %} 		  
+	</table>
+  </body>
+</html>

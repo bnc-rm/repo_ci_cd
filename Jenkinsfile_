@@ -1,13 +1,24 @@
 pipeline {
     agent any
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }    
 
     environment {
+        DOCKERHUB_CREDENTIALS = credentials('angelocapone')
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials' // ID delle credenziali Docker Hub in Jenkins
         DOCKER_IMAGE = 'tuo-username-dockerhub/tuo-repo' // Nome dell'immagine Docker
         GIT_REPO = 'https://github.com/tuo-username/tuo-repo.git' // URL del repository GitHub
     }
 
     stages {
+
+        stage('Login') {
+        steps {
+            bat 'echo %DOCKERHUB_CREDENTIALS_PSW% | docker login -u %DOCKERHUB_CREDENTIALS_USR% --password-stdin'
+        }
+        }
+
         stage('Clone repository') {
             steps {
                 git url: "${env.GIT_REPO}", branch: 'main'

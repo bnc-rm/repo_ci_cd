@@ -1,1 +1,1 @@
-python e jenkins per pipeline da github a docker hub in maniera asincrona
+python e jenkins per pipeline da github a docker hub con e senza Groovy

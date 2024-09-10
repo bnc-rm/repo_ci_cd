@@ -4,13 +4,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'docker build -t angelocapone/modelonweb:v2 .'
+        bat 'docker build -t angelocapone/model:v2 .'
       }
     }
 
     stage('Push') {
       steps {
-        bat 'docker push angelocapone/modelonweb:v2'
+        bat 'docker push angelocapone/model:v2'
       }
     }
   }

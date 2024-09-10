@@ -27,6 +27,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: angelocapone/modelonweb:v2
+        image: angelocapone/model:v3
         ports:
         - containerPort: 80

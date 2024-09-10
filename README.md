@@ -1,1 +1,1 @@
-python e jenkins per pipeline da github a docker hub con e senza Groovy
+python e jenkins per pipeline da github a docker hub e cd con kubectl

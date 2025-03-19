@@ -1,1 +1,1 @@
-python e jenkins per pipeline da github a docker hub e cd con kubectl
+python e jenkins per pipeline da github a docker hub

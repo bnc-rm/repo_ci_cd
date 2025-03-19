@@ -1,1 +1,1 @@
-python e jenkins per pipeline da github a docker hub
+python e jenkins per pipeline da github a docker hub (nuova versione)
